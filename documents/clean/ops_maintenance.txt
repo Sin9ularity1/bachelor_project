@@ -1,0 +1,20 @@
+Northstar Industries
+Preventive Maintenance
+Document status: Approved
+Classification: Internal
+Document ID: NS-037
+Department: Operations
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for preventive maintenance. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 Production line inspections are scheduled every two weeks.
+2.2 The maintenance supervisor signs completed maintenance checklists.
+
+3. Responsibilities
+The operations function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses preventive maintenance. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

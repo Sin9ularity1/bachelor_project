@@ -1,0 +1,20 @@
+Northstar Industries
+Safety Training
+Document status: Approved
+Classification: Internal
+Document ID: NS-039
+Department: Operations
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for safety training. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 Warehouse safety training must be renewed every twelve months.
+2.2 The safety coordinator maintains warehouse safety training records.
+
+3. Responsibilities
+The operations function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses safety training. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

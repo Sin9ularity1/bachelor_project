@@ -1,0 +1,20 @@
+Northstar Industries
+Supplier Onboarding
+Document status: Approved
+Classification: Internal
+Document ID: NS-035
+Department: Finance
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for supplier onboarding. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 New supplier approval requires verification of tax registration and bank details.
+2.2 The accounts payable lead approves new supplier master records.
+
+3. Responsibilities
+The finance function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses supplier onboarding. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

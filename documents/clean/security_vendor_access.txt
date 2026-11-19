@@ -1,0 +1,20 @@
+Northstar Industries
+Vendor Access
+Document status: Approved
+Classification: Internal
+Document ID: NS-018
+Department: Security
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for vendor access. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 Vendor remote access requires an approved time-limited access request.
+2.2 The maximum default vendor access window is eight hours.
+
+3. Responsibilities
+The security function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses vendor access. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

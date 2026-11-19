@@ -1,0 +1,20 @@
+Northstar Industries
+Phishing Reporting
+Document status: Approved
+Classification: Internal
+Document ID: NS-011
+Department: Security
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for phishing reporting. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 Employees must forward suspected phishing messages to the security reporting mailbox.
+2.2 Employees must not click links or open attachments in suspected phishing messages.
+
+3. Responsibilities
+The security function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses phishing reporting. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

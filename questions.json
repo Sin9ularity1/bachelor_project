@@ -1,0 +1,902 @@
+[
+  {
+    "id": "Q001",
+    "question": "What is the minimum password length?",
+    "expected_answer": "14 characters",
+    "expected_source": "it_policy.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "All employee passwords must contain at least 14 characters."
+  },
+  {
+    "id": "Q002",
+    "question": "Is MFA required for remote access?",
+    "expected_answer": "Yes",
+    "expected_source": "it_policy.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Multifactor authentication is mandatory for remote access."
+  },
+  {
+    "id": "Q003",
+    "question": "When must new laptops be enrolled in device management?",
+    "expected_answer": "Before being issued to employees",
+    "expected_source": "it_device_enrollment.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "New laptops must be enrolled in device management before being issued to employees."
+  },
+  {
+    "id": "Q004",
+    "question": "Who approves exceptions to device enrollment?",
+    "expected_answer": "IT operations manager",
+    "expected_source": "it_device_enrollment.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "The IT operations manager must approve any device-enrollment exception."
+  },
+  {
+    "id": "Q005",
+    "question": "Who can approve installation of unlisted software?",
+    "expected_answer": "IT service desk",
+    "expected_source": "it_software_installation.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "The IT service desk must approve installation of software not in the approved catalog."
+  },
+  {
+    "id": "Q006",
+    "question": "How quickly must unsupported software be removed?",
+    "expected_answer": "Within 5 business days",
+    "expected_source": "it_software_installation.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Unsupported software must be removed within five business days of detection."
+  },
+  {
+    "id": "Q007",
+    "question": "How often are production file shares backed up?",
+    "expected_answer": "Every night",
+    "expected_source": "it_backup_policy.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Production file shares are backed up every night."
+  },
+  {
+    "id": "Q008",
+    "question": "How long are daily file-share backups retained?",
+    "expected_answer": "30 days",
+    "expected_source": "it_backup_policy.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Daily file-share backups are retained for 30 days."
+  },
+  {
+    "id": "Q009",
+    "question": "Who may request a file restore?",
+    "expected_answer": "The file owner or their manager",
+    "expected_source": "it_restore_requests.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "A file restore may be requested by the file owner or their manager."
+  },
+  {
+    "id": "Q010",
+    "question": "What is the target response time for a standard restore request?",
+    "expected_answer": "2 business days",
+    "expected_source": "it_restore_requests.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "The target response time for a standard restore request is two business days."
+  },
+  {
+    "id": "Q011",
+    "question": "How much notice is required for routine production changes?",
+    "expected_answer": "2 business days",
+    "expected_source": "it_change_management.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Routine production changes require at least two business days notice."
+  },
+  {
+    "id": "Q012",
+    "question": "Who approves emergency production changes?",
+    "expected_answer": "The on-call IT lead",
+    "expected_source": "it_change_management.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Emergency production changes must be approved by the on-call IT lead."
+  },
+  {
+    "id": "Q013",
+    "question": "What is the service desk response target for critical incidents?",
+    "expected_answer": "30 minutes",
+    "expected_source": "it_service_desk.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Critical incidents have a service desk response target of 30 minutes."
+  },
+  {
+    "id": "Q014",
+    "question": "Where should employees report nonurgent IT problems?",
+    "expected_answer": "The IT ticket portal",
+    "expected_source": "it_service_desk.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Employees must report nonurgent IT problems through the IT ticket portal."
+  },
+  {
+    "id": "Q015",
+    "question": "What must happen before storage drives are recycled?",
+    "expected_answer": "Cryptographic erasure",
+    "expected_source": "it_asset_disposal.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Storage drives must undergo verified cryptographic erasure before recycling."
+  },
+  {
+    "id": "Q016",
+    "question": "Who signs off on retired asset disposal?",
+    "expected_answer": "IT asset coordinator",
+    "expected_source": "it_asset_disposal.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "The IT asset coordinator signs off on retired asset disposal."
+  },
+  {
+    "id": "Q017",
+    "question": "Which network should visitors use?",
+    "expected_answer": "The guest Wi-Fi network",
+    "expected_source": "it_network_access.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Visitors must use the guest Wi-Fi network, not the corporate LAN."
+  },
+  {
+    "id": "Q018",
+    "question": "How long do temporary wired network exceptions last?",
+    "expected_answer": "7 days",
+    "expected_source": "it_network_access.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Temporary wired network exceptions expire after seven days."
+  },
+  {
+    "id": "Q019",
+    "question": "What must a technician obtain before controlling an employee computer remotely?",
+    "expected_answer": "The employee’s consent",
+    "expected_source": "it_remote_support.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "A technician must obtain the employee’s consent before starting a remote-control session."
+  },
+  {
+    "id": "Q020",
+    "question": "How long are remote support session logs kept?",
+    "expected_answer": "90 days",
+    "expected_source": "it_remote_support.txt",
+    "category": "IT",
+    "answerable": true,
+    "evidence": "Remote support session logs are kept for 90 days."
+  },
+  {
+    "id": "Q021",
+    "question": "Where should suspected phishing emails be reported?",
+    "expected_answer": "The security reporting mailbox",
+    "expected_source": "security_phishing.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Employees must forward suspected phishing messages to the security reporting mailbox."
+  },
+  {
+    "id": "Q022",
+    "question": "Should employees click links in suspected phishing messages?",
+    "expected_answer": "No",
+    "expected_source": "security_phishing.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Employees must not click links or open attachments in suspected phishing messages."
+  },
+  {
+    "id": "Q023",
+    "question": "How soon must a suspected security incident be reported?",
+    "expected_answer": "Immediately",
+    "expected_source": "security_incident_response.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Suspected security incidents must be reported immediately after discovery."
+  },
+  {
+    "id": "Q024",
+    "question": "Who coordinates a severity-one security incident?",
+    "expected_answer": "The incident commander",
+    "expected_source": "security_incident_response.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "The incident commander coordinates severity-one security incidents."
+  },
+  {
+    "id": "Q025",
+    "question": "What is required to reset a lost MFA device?",
+    "expected_answer": "Identity verification by the service desk",
+    "expected_source": "security_mfa_recovery.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "A lost MFA device can be reset only after service-desk identity verification."
+  },
+  {
+    "id": "Q026",
+    "question": "How long does an emergency MFA recovery code remain valid?",
+    "expected_answer": "15 minutes",
+    "expected_source": "security_mfa_recovery.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "An emergency MFA recovery code remains valid for 15 minutes."
+  },
+  {
+    "id": "Q027",
+    "question": "How often are privileged access rights reviewed?",
+    "expected_answer": "Every quarter",
+    "expected_source": "security_privileged_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Privileged access rights are reviewed every quarter."
+  },
+  {
+    "id": "Q028",
+    "question": "May administrators use privileged accounts for everyday email?",
+    "expected_answer": "No",
+    "expected_source": "security_privileged_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Administrators must not use privileged accounts for everyday email."
+  },
+  {
+    "id": "Q029",
+    "question": "What is the remediation deadline for critical vulnerabilities?",
+    "expected_answer": "72 hours",
+    "expected_source": "security_vulnerability_management.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Critical vulnerabilities must be remediated within 72 hours of confirmation."
+  },
+  {
+    "id": "Q030",
+    "question": "How often are authenticated vulnerability scans scheduled?",
+    "expected_answer": "Weekly",
+    "expected_source": "security_vulnerability_management.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Authenticated vulnerability scans are scheduled weekly."
+  },
+  {
+    "id": "Q031",
+    "question": "What are the four information classification levels?",
+    "expected_answer": "Public, Internal, Confidential, and Restricted",
+    "expected_source": "security_data_classification.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Information is classified as Public, Internal, Confidential, or Restricted."
+  },
+  {
+    "id": "Q032",
+    "question": "Who can downgrade a Restricted document?",
+    "expected_answer": "The data owner with security approval",
+    "expected_source": "security_data_classification.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Only the data owner with security approval may downgrade a Restricted document."
+  },
+  {
+    "id": "Q033",
+    "question": "What encryption is required for employee laptops?",
+    "expected_answer": "Full-disk encryption",
+    "expected_source": "security_encryption.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "All employee laptops must use full-disk encryption."
+  },
+  {
+    "id": "Q034",
+    "question": "How must encryption recovery keys be stored?",
+    "expected_answer": "In the approved key escrow service",
+    "expected_source": "security_encryption.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Encryption recovery keys must be stored in the approved key escrow service."
+  },
+  {
+    "id": "Q035",
+    "question": "What must be approved before vendors receive remote access?",
+    "expected_answer": "A time-limited access request",
+    "expected_source": "security_vendor_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Vendor remote access requires an approved time-limited access request."
+  },
+  {
+    "id": "Q036",
+    "question": "What is the maximum default vendor access window?",
+    "expected_answer": "8 hours",
+    "expected_source": "security_vendor_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "The maximum default vendor access window is eight hours."
+  },
+  {
+    "id": "Q037",
+    "question": "How long are security event logs retained?",
+    "expected_answer": "180 days",
+    "expected_source": "security_logging.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Security event logs are retained for 180 days."
+  },
+  {
+    "id": "Q038",
+    "question": "Who may disable centralized security logging?",
+    "expected_answer": "The security lead during an approved maintenance window",
+    "expected_source": "security_logging.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Only the security lead may disable centralized security logging during approved maintenance."
+  },
+  {
+    "id": "Q039",
+    "question": "How quickly must lost access badges be reported?",
+    "expected_answer": "Immediately",
+    "expected_source": "security_physical_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "Lost access badges must be reported immediately."
+  },
+  {
+    "id": "Q040",
+    "question": "Who may authorize after-hours visitor entry?",
+    "expected_answer": "The site security supervisor",
+    "expected_source": "security_physical_access.txt",
+    "category": "Security",
+    "answerable": true,
+    "evidence": "After-hours visitor entry requires authorization from the site security supervisor."
+  },
+  {
+    "id": "Q041",
+    "question": "How many days of paid annual leave do full-time employees receive?",
+    "expected_answer": "25 days",
+    "expected_source": "hr_policy.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Full-time employees receive 25 days of paid annual leave."
+  },
+  {
+    "id": "Q042",
+    "question": "How long is the standard probation period?",
+    "expected_answer": "3 months",
+    "expected_source": "hr_policy.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The standard probation period is three months."
+  },
+  {
+    "id": "Q043",
+    "question": "How many days per week may employees work remotely with approval?",
+    "expected_answer": "2 days",
+    "expected_source": "hr_remote_work.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Employees may work remotely up to two days per week with manager approval."
+  },
+  {
+    "id": "Q044",
+    "question": "Who approves remote work arrangements?",
+    "expected_answer": "The employee’s manager",
+    "expected_source": "hr_remote_work.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The employee’s manager approves remote work arrangements."
+  },
+  {
+    "id": "Q045",
+    "question": "When must employees report sickness absence?",
+    "expected_answer": "Before their scheduled start time",
+    "expected_source": "hr_sick_leave.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Employees must report sickness absence before their scheduled start time."
+  },
+  {
+    "id": "Q046",
+    "question": "Who receives the initial sick-leave notification?",
+    "expected_answer": "The direct manager",
+    "expected_source": "hr_sick_leave.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The direct manager receives the initial sick-leave notification."
+  },
+  {
+    "id": "Q047",
+    "question": "When should a new hire receive their induction schedule?",
+    "expected_answer": "At least 3 business days before starting",
+    "expected_source": "hr_onboarding.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "New hires receive their induction schedule at least three business days before starting."
+  },
+  {
+    "id": "Q048",
+    "question": "Who assigns an onboarding buddy?",
+    "expected_answer": "The hiring manager",
+    "expected_source": "hr_onboarding.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The hiring manager assigns an onboarding buddy."
+  },
+  {
+    "id": "Q049",
+    "question": "What is the annual training budget per employee?",
+    "expected_answer": "6,000 DKK",
+    "expected_source": "hr_training.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The standard annual training budget is 6,000 DKK per employee."
+  },
+  {
+    "id": "Q050",
+    "question": "Who approves training expenses above the standard budget?",
+    "expected_answer": "The department head",
+    "expected_source": "hr_training.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Training expenses above the standard budget require department-head approval."
+  },
+  {
+    "id": "Q051",
+    "question": "How far in advance should international business travel be requested?",
+    "expected_answer": "14 days",
+    "expected_source": "hr_travel.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "International business travel should be requested at least fourteen days in advance."
+  },
+  {
+    "id": "Q052",
+    "question": "Who approves international business travel?",
+    "expected_answer": "The department head",
+    "expected_source": "hr_travel.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "International business travel requires department-head approval."
+  },
+  {
+    "id": "Q053",
+    "question": "How often are formal performance reviews held?",
+    "expected_answer": "Twice a year",
+    "expected_source": "hr_performance_reviews.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Formal performance reviews are held twice a year."
+  },
+  {
+    "id": "Q054",
+    "question": "Who documents performance review outcomes?",
+    "expected_answer": "The direct manager",
+    "expected_source": "hr_performance_reviews.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "The direct manager documents performance review outcomes."
+  },
+  {
+    "id": "Q055",
+    "question": "When must departing employees return company devices?",
+    "expected_answer": "By their last working day",
+    "expected_source": "hr_offboarding.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Departing employees must return company devices by their last working day."
+  },
+  {
+    "id": "Q056",
+    "question": "Who initiates the offboarding access checklist?",
+    "expected_answer": "Human Resources",
+    "expected_source": "hr_offboarding.txt",
+    "category": "HR",
+    "answerable": true,
+    "evidence": "Human Resources initiates the offboarding access checklist."
+  },
+  {
+    "id": "Q057",
+    "question": "What purchase amount requires manager approval?",
+    "expected_answer": "More than 10,000 DKK",
+    "expected_source": "finance_policy.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Purchases exceeding 10,000 DKK require manager approval."
+  },
+  {
+    "id": "Q058",
+    "question": "Within how many days must expense claims be submitted?",
+    "expected_answer": "30 days",
+    "expected_source": "finance_policy.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Expense claims must be submitted within 30 days of the expense."
+  },
+  {
+    "id": "Q059",
+    "question": "What reference must supplier invoices include?",
+    "expected_answer": "A purchase order number",
+    "expected_source": "finance_invoice_processing.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Supplier invoices must include a purchase order number."
+  },
+  {
+    "id": "Q060",
+    "question": "How often are supplier payment batches processed?",
+    "expected_answer": "Every Thursday",
+    "expected_source": "finance_invoice_processing.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Supplier payment batches are processed every Thursday."
+  },
+  {
+    "id": "Q061",
+    "question": "How often are employee expense reimbursements processed?",
+    "expected_answer": "Twice a month",
+    "expected_source": "finance_expense_reimbursement.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Employee expense reimbursements are processed twice a month."
+  },
+  {
+    "id": "Q062",
+    "question": "What documentation is required for expense reimbursement?",
+    "expected_answer": "An itemized receipt",
+    "expected_source": "finance_expense_reimbursement.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Expense reimbursement claims must include an itemized receipt."
+  },
+  {
+    "id": "Q063",
+    "question": "Who creates purchase orders for approved purchases?",
+    "expected_answer": "The procurement team",
+    "expected_source": "finance_purchase_orders.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "The procurement team creates purchase orders for approved purchases."
+  },
+  {
+    "id": "Q064",
+    "question": "When must a purchase order be created?",
+    "expected_answer": "Before the supplier is engaged",
+    "expected_source": "finance_purchase_orders.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Purchase orders must be created before the supplier is engaged."
+  },
+  {
+    "id": "Q065",
+    "question": "How often are department budgets reviewed?",
+    "expected_answer": "Monthly",
+    "expected_source": "finance_budget_reviews.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Department budgets are reviewed monthly."
+  },
+  {
+    "id": "Q066",
+    "question": "Who signs off on quarterly budget forecasts?",
+    "expected_answer": "The finance director",
+    "expected_source": "finance_budget_reviews.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "The finance director signs off on quarterly budget forecasts."
+  },
+  {
+    "id": "Q067",
+    "question": "What is the default single-transaction limit on corporate cards?",
+    "expected_answer": "5,000 DKK",
+    "expected_source": "finance_corporate_cards.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "The default corporate card single-transaction limit is 5,000 DKK."
+  },
+  {
+    "id": "Q068",
+    "question": "How soon must lost corporate cards be reported?",
+    "expected_answer": "Immediately",
+    "expected_source": "finance_corporate_cards.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Lost corporate cards must be reported immediately to finance."
+  },
+  {
+    "id": "Q069",
+    "question": "What must be verified before a new supplier is approved?",
+    "expected_answer": "Tax registration and bank details",
+    "expected_source": "finance_supplier_onboarding.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "New supplier approval requires verification of tax registration and bank details."
+  },
+  {
+    "id": "Q070",
+    "question": "Who approves new supplier master records?",
+    "expected_answer": "The accounts payable lead",
+    "expected_source": "finance_supplier_onboarding.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "The accounts payable lead approves new supplier master records."
+  },
+  {
+    "id": "Q071",
+    "question": "When must contract owners review upcoming renewals?",
+    "expected_answer": "60 days before renewal",
+    "expected_source": "finance_contract_renewals.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "Contract owners must review upcoming renewals at least 60 days before renewal."
+  },
+  {
+    "id": "Q072",
+    "question": "Who records signed contract amendments?",
+    "expected_answer": "The legal operations team",
+    "expected_source": "finance_contract_renewals.txt",
+    "category": "Finance",
+    "answerable": true,
+    "evidence": "The legal operations team records signed contract amendments."
+  },
+  {
+    "id": "Q073",
+    "question": "How often are production line inspections scheduled?",
+    "expected_answer": "Every 2 weeks",
+    "expected_source": "ops_maintenance.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Production line inspections are scheduled every two weeks."
+  },
+  {
+    "id": "Q074",
+    "question": "Who signs completed maintenance checklists?",
+    "expected_answer": "The maintenance supervisor",
+    "expected_source": "ops_maintenance.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The maintenance supervisor signs completed maintenance checklists."
+  },
+  {
+    "id": "Q075",
+    "question": "What time does the main reception close on weekdays?",
+    "expected_answer": "17:00",
+    "expected_source": "ops_facility_access.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Main reception closes at 17:00 on weekdays."
+  },
+  {
+    "id": "Q076",
+    "question": "Where should deliveries outside reception hours be directed?",
+    "expected_answer": "The loading bay",
+    "expected_source": "ops_facility_access.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Deliveries outside reception hours must be directed to the loading bay."
+  },
+  {
+    "id": "Q077",
+    "question": "How often must warehouse safety training be renewed?",
+    "expected_answer": "Every 12 months",
+    "expected_source": "ops_safety_training.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Warehouse safety training must be renewed every twelve months."
+  },
+  {
+    "id": "Q078",
+    "question": "Who maintains warehouse safety training records?",
+    "expected_answer": "The safety coordinator",
+    "expected_source": "ops_safety_training.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The safety coordinator maintains warehouse safety training records."
+  },
+  {
+    "id": "Q079",
+    "question": "What is the maximum standard equipment loan period?",
+    "expected_answer": "14 days",
+    "expected_source": "ops_equipment_checkout.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The maximum standard equipment loan period is fourteen days."
+  },
+  {
+    "id": "Q080",
+    "question": "Who approves equipment loan extensions?",
+    "expected_answer": "The equipment custodian",
+    "expected_source": "ops_equipment_checkout.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The equipment custodian approves equipment loan extensions."
+  },
+  {
+    "id": "Q081",
+    "question": "How many samples are checked per production batch?",
+    "expected_answer": "5 samples",
+    "expected_source": "ops_quality_control.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Quality control checks five samples per production batch."
+  },
+  {
+    "id": "Q082",
+    "question": "Who may release a batch that initially failed inspection?",
+    "expected_answer": "The quality manager after documented retesting",
+    "expected_source": "ops_quality_control.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Only the quality manager may release a batch after documented retesting."
+  },
+  {
+    "id": "Q083",
+    "question": "How often are cycle counts performed?",
+    "expected_answer": "Weekly",
+    "expected_source": "ops_inventory.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Inventory cycle counts are performed weekly."
+  },
+  {
+    "id": "Q084",
+    "question": "Who approves stock adjustments above 2,000 DKK?",
+    "expected_answer": "The warehouse manager",
+    "expected_source": "ops_inventory.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Stock adjustments above 2,000 DKK require warehouse-manager approval."
+  },
+  {
+    "id": "Q085",
+    "question": "How often are evacuation drills conducted?",
+    "expected_answer": "Twice a year",
+    "expected_source": "ops_emergency_drills.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "Evacuation drills are conducted twice a year."
+  },
+  {
+    "id": "Q086",
+    "question": "Where is the primary evacuation assembly point?",
+    "expected_answer": "The north parking lot",
+    "expected_source": "ops_emergency_drills.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The primary evacuation assembly point is the north parking lot."
+  },
+  {
+    "id": "Q087",
+    "question": "What is the daily cutoff for same-day domestic shipments?",
+    "expected_answer": "14:00",
+    "expected_source": "ops_shipping.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The daily cutoff for same-day domestic shipments is 14:00."
+  },
+  {
+    "id": "Q088",
+    "question": "Who verifies hazardous goods shipping paperwork?",
+    "expected_answer": "The logistics compliance officer",
+    "expected_source": "ops_shipping.txt",
+    "category": "Operations",
+    "answerable": true,
+    "evidence": "The logistics compliance officer verifies hazardous goods shipping paperwork."
+  },
+  {
+    "id": "Q089",
+    "question": "How often does the executive operations committee meet?",
+    "expected_answer": "Every Monday",
+    "expected_source": "mgmt_meetings.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "The executive operations committee meets every Monday."
+  },
+  {
+    "id": "Q090",
+    "question": "When are meeting minutes distributed?",
+    "expected_answer": "Within 2 business days",
+    "expected_source": "mgmt_meetings.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Meeting minutes are distributed within two business days."
+  },
+  {
+    "id": "Q091",
+    "question": "How often are controlled procedures reviewed?",
+    "expected_answer": "Annually",
+    "expected_source": "mgmt_document_control.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Controlled procedures are reviewed annually."
+  },
+  {
+    "id": "Q092",
+    "question": "Who assigns controlled document revision numbers?",
+    "expected_answer": "The document controller",
+    "expected_source": "mgmt_document_control.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "The document controller assigns controlled document revision numbers."
+  },
+  {
+    "id": "Q093",
+    "question": "What must every project have before work begins?",
+    "expected_answer": "An approved project charter",
+    "expected_source": "mgmt_project_governance.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Every project must have an approved project charter before work begins."
+  },
+  {
+    "id": "Q094",
+    "question": "Who chairs project steering meetings?",
+    "expected_answer": "The project sponsor",
+    "expected_source": "mgmt_project_governance.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "The project sponsor chairs project steering meetings."
+  },
+  {
+    "id": "Q095",
+    "question": "How often are high-priority risks reviewed?",
+    "expected_answer": "Monthly",
+    "expected_source": "mgmt_risk_register.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "High-priority risks are reviewed monthly."
+  },
+  {
+    "id": "Q096",
+    "question": "Who owns the corporate risk register?",
+    "expected_answer": "The risk and compliance manager",
+    "expected_source": "mgmt_risk_register.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "The risk and compliance manager owns the corporate risk register."
+  },
+  {
+    "id": "Q097",
+    "question": "Where are company-wide policy updates published?",
+    "expected_answer": "The employee intranet",
+    "expected_source": "mgmt_internal_comms.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Company-wide policy updates are published on the employee intranet."
+  },
+  {
+    "id": "Q098",
+    "question": "Who approves company-wide announcements?",
+    "expected_answer": "The communications manager",
+    "expected_source": "mgmt_internal_comms.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "The communications manager approves company-wide announcements."
+  },
+  {
+    "id": "Q099",
+    "question": "How long are approved project closure reports retained?",
+    "expected_answer": "7 years",
+    "expected_source": "mgmt_records_retention.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Approved project closure reports are retained for seven years."
+  },
+  {
+    "id": "Q100",
+    "question": "Who authorizes early disposal of business records?",
+    "expected_answer": "The records manager and legal counsel",
+    "expected_source": "mgmt_records_retention.txt",
+    "category": "Management",
+    "answerable": true,
+    "evidence": "Early disposal of business records requires approval from the records manager and legal counsel."
+  }
+]

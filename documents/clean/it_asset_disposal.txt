@@ -1,0 +1,20 @@
+Northstar Industries
+IT Asset Disposal
+Document status: Approved
+Classification: Internal
+Document ID: NS-008
+Department: IT
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for it asset disposal. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 Storage drives must undergo verified cryptographic erasure before recycling.
+2.2 The IT asset coordinator signs off on retired asset disposal.
+
+3. Responsibilities
+The it function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses it asset disposal. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

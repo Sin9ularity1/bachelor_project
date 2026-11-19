@@ -1,0 +1,20 @@
+Northstar Industries
+Remote Support
+Document status: Approved
+Classification: Internal
+Document ID: NS-010
+Department: IT
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for remote support. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 A technician must obtain the employee’s consent before starting a remote-control session.
+2.2 Remote support session logs are kept for 90 days.
+
+3. Responsibilities
+The it function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses remote support. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.

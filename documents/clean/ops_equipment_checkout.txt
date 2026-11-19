@@ -1,0 +1,20 @@
+Northstar Industries
+Equipment Checkout
+Document status: Approved
+Classification: Internal
+Document ID: NS-040
+Department: Operations
+Version: 1.0
+
+1. Purpose
+This procedure establishes the Northstar Industries requirements for equipment checkout. It applies to employees and relevant approved contractors.
+
+2. Requirements
+2.1 The maximum standard equipment loan period is fourteen days.
+2.2 The equipment custodian approves equipment loan extensions.
+
+3. Responsibilities
+The operations function maintains this document and records exceptions through the normal approval workflow. Employees must follow the requirements stated above.
+
+4. Related guidance
+This document addresses equipment checkout. Other Northstar Industries procedures may cover related but distinct workflows. In the event of uncertainty, employees should consult the responsible department.
