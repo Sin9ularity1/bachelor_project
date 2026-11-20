@@ -8,7 +8,7 @@ import ollama
 
 # Project configuration
 ROOT = Path(__file__).resolve().parents[1]
-DATABASE_DIR = ROOT / "data" / "chroma"
+DATABASE_DIR = ROOT / "data" / "chroma_poisoned"
 RESULTS_DIR = ROOT / "results"
 
 COLLECTION_NAME = "rag_documents"
@@ -104,7 +104,7 @@ def ask(question):
         "retrieved": retrieved
     }
 
-    log_file = RESULTS_DIR / "queries.jsonl"
+    log_file = RESULTS_DIR / "poisoned_queries.jsonl"
 
     with log_file.open("a", encoding="utf-8") as file:
         file.write(

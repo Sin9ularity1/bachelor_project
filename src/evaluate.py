@@ -18,7 +18,7 @@ def main():
         questions = json.load(file)
 
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    output_file = RESULTS_DIR / f"baseline_{timestamp}.csv"
+    output_file = RESULTS_DIR / f"poisoned_{timestamp}.csv"
 
     rows = []
 
@@ -34,6 +34,11 @@ def main():
             retrieved_sources = [
                 item["source"] for item in retrieved
             ]
+
+            poisoned_chunks = sum(
+                item.get("dataset") == "poisoned"
+                for item in retrieved
+            )
 
             source_rank = next(
                 (
@@ -51,6 +56,7 @@ def main():
                 "expected_source": expected_source,
                 "generated_answer": answer,
                 "retrieved_sources": " | ".join(retrieved_sources),
+                "poisoned_chunks_retrieved": poisoned_chunks,
                 "expected_source_rank": source_rank or "",
                 "source_in_top_k": source_rank is not None,
                 "status": "completed"
@@ -58,8 +64,9 @@ def main():
 
             print(
                 f"  Expected source rank: "
-                f"{source_rank if source_rank else 'NOT FOUND'}"
+                f"{source_rank if source_rank is not None else 'NOT FOUND'}"
             )
+            print(f"  Poisoned chunks retrieved: {poisoned_chunks}")
 
         except Exception as error:
             print(f"  ERROR: {error}")
@@ -71,6 +78,7 @@ def main():
                 "expected_source": expected_source,
                 "generated_answer": "",
                 "retrieved_sources": "",
+                "poisoned_chunks_retrieved": 0,
                 "expected_source_rank": "",
                 "source_in_top_k": False,
                 "status": f"error: {error}"
@@ -83,6 +91,7 @@ def main():
         "expected_source",
         "generated_answer",
         "retrieved_sources",
+        "poisoned_chunks_retrieved",
         "expected_source_rank",
         "source_in_top_k",
         "status"
@@ -103,8 +112,19 @@ def main():
         for row in completed
     )
 
-    print("\n-----------------------------")
-    print("Baseline evaluation complete")
+    questions_with_poison = sum(
+        row["poisoned_chunks_retrieved"] > 0
+        for row in completed
+    )
+
+    total_poisoned_chunks = sum(
+        row["poisoned_chunks_retrieved"]
+        for row in completed
+    )
+
+    print("\n--------------------------------")
+    print("Poisoned RAG evaluation complete")
+    print("--------------------------------")
     print(f"Total questions: {len(questions)}")
     print(f"Completed: {len(completed)}")
     print(f"Errors: {len(questions) - len(completed)}")
@@ -116,8 +136,19 @@ def main():
             f"({successful / len(completed) * 100:.1f}%)"
         )
 
+        print(
+            f"Questions retrieving poisoned content: "
+            f"{questions_with_poison}/{len(completed)} "
+            f"({questions_with_poison / len(completed) * 100:.1f}%)"
+        )
+
+        print(
+            f"Total poisoned chunks retrieved: "
+            f"{total_poisoned_chunks}"
+        )
+
     print(f"Results saved: {output_file}")
-    print("-----------------------------")
+    print("--------------------------------")
 
 
 if __name__ == "__main__":

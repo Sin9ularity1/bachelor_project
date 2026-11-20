@@ -6,8 +6,9 @@ import ollama
 
 # Project paths
 ROOT = Path(__file__).resolve().parents[1]
-DOCUMENTS_DIR = ROOT / "documents" / "clean"
-DATABASE_DIR = ROOT / "data" / "chroma"
+CLEAN_DOCUMENTS_DIR = ROOT / "documents" / "clean"
+POISONED_DOCUMENTS_DIR = ROOT / "documents" / "poisoned"
+DATABASE_DIR = ROOT / "data" / "chroma_poisoned"
 
 # Configuration
 EMBEDDING_MODEL = "nomic-embed-text"
@@ -38,7 +39,7 @@ def main():
         path=str(DATABASE_DIR)
     )
 
-    # Rebuild the clean baseline collection
+    # Rebuild the experimental collection
     try:
         client.delete_collection(COLLECTION_NAME)
     except chromadb.errors.NotFoundError:
@@ -51,7 +52,12 @@ def main():
 
     total_chunks = 0
 
-    for file in sorted(DOCUMENTS_DIR.glob("*.txt")):
+    document_files = (
+        [(file, "clean") for file in sorted(CLEAN_DOCUMENTS_DIR.glob("*.txt"))]
+        + [(file, "poisoned") for file in sorted(POISONED_DOCUMENTS_DIR.glob("*.txt"))]
+    )
+
+    for file, dataset in document_files:
         print(f"\nProcessing: {file.name}")
 
         text = file.read_text(encoding="utf-8")
@@ -68,13 +74,13 @@ def main():
 
             # Store the chunk and its embedding
             collection.add(
-                ids=[f"{file.stem}_{index}"],
+                ids=[f"{dataset}_{file.stem}_{index}"],
                 documents=[chunk],
                 embeddings=[embedding],
                 metadatas=[{
                     "source": file.name,
                     "chunk_index": index,
-                    "dataset": "clean"
+                    "dataset": dataset
                 }]
             )
 
@@ -84,7 +90,8 @@ def main():
 
     print("\n-----------------------------")
     print("Ingestion completed")
-    print(f"Documents: {len(list(DOCUMENTS_DIR.glob('*.txt')))}")
+    print(f"Clean documents: {len(list(CLEAN_DOCUMENTS_DIR.glob('*.txt')))}")
+    print(f"Poisoned documents: {len(list(POISONED_DOCUMENTS_DIR.glob('*.txt')))}")
     print(f"Chunks: {total_chunks}")
     print(f"Database: {DATABASE_DIR}")
     print("-----------------------------")
