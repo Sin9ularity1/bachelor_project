@@ -4,3 +4,5 @@ __pycache__/
 data/chroma/
 data/chroma_poisoned/
 data/chroma_confidentiality/
+data/chroma_confidentiality_clean/
+data/chroma_confidentiality_poisoned/
