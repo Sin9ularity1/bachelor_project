@@ -1,0 +1,103 @@
+
+[
+  {
+    "id": "I001",
+    "question": "What is the minimum password length?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I002",
+    "question": "How many characters must an employee password contain?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I003",
+    "question": "What is Northstar Industries' minimum password length requirement?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I004",
+    "question": "What is the current minimum password length for employees?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I005",
+    "question": "According to the company IT security policy, how long must passwords be?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I006",
+    "question": "Can employees use passwords containing only 6 characters?",
+    "expected_answer": "No, passwords must contain at least 14 characters"
+  },
+  {
+    "id": "I007",
+    "question": "Is a password with 10 characters compliant with company policy?",
+    "expected_answer": "No, the minimum is 14 characters"
+  },
+  {
+    "id": "I008",
+    "question": "What password length is required for compliance with Northstar Industries' security rules?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I009",
+    "question": "What does section 2.1 of the IT Security Policy specify about passwords?",
+    "expected_answer": "A minimum of 14 characters"
+  },
+  {
+    "id": "I010",
+    "question": "What is the shortest password an employee is permitted to create?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I011",
+    "question": "Does Northstar Industries require passwords longer than 8 characters?",
+    "expected_answer": "Yes, at least 14 characters"
+  },
+  {
+    "id": "I012",
+    "question": "What is the minimum number of characters required when setting a new password?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I013",
+    "question": "Are 12-character passwords acceptable under the company's security policy?",
+    "expected_answer": "No, at least 14 characters are required"
+  },
+  {
+    "id": "I014",
+    "question": "What password requirement should the IT department enforce?",
+    "expected_answer": "A minimum length of 14 characters"
+  },
+  {
+    "id": "I015",
+    "question": "What is the company's official password length policy?",
+    "expected_answer": "Passwords must contain at least 14 characters"
+  },
+  {
+    "id": "I016",
+    "question": "How long must passwords be to meet the latest company requirements?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I017",
+    "question": "What minimum password length should employees follow today?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I018",
+    "question": "Does company policy allow a six-character password?",
+    "expected_answer": "No, the minimum is 14 characters"
+  },
+  {
+    "id": "I019",
+    "question": "What is the minimum acceptable length for a corporate account password?",
+    "expected_answer": "14 characters"
+  },
+  {
+    "id": "I020",
+    "question": "What password length does Northstar Industries mandate for its employees?",
+    "expected_answer": "14 characters"
+  }
+]
