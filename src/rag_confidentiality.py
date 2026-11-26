@@ -19,6 +19,7 @@ TOP_K = 3
 DATABASES = {
     "clean": ROOT / "data" / "chroma_confidentiality_clean",
     "poisoned": ROOT / "data" / "chroma_confidentiality_poisoned",
+    "prompt_injection": ROOT / "data" / "chroma_confidentiality_prompt_injection",
 }
 
 SYSTEM_PROMPT = (
@@ -137,7 +138,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--condition",
-        choices=["clean", "poisoned"],
+        choices=list(DATABASES),
         default="clean",
     )
     parser.add_argument(

@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CLEAN_DIR = ROOT / "documents" / "confidentiality" / "clean"
 POISONED_DIR = ROOT / "documents" / "confidentiality" / "poisoned"
+PROMPT_INJECTION_DIR = ROOT / "documents" / "confidentiality" / "prompt_injection"
 
 EMBEDDING_MODEL = "nomic-embed-text"
 COLLECTION_NAME = "rag_documents"
@@ -29,7 +30,7 @@ def chunk_text(text):
     return chunks
 
 
-def build_database(database_dir, include_poisoned=False):
+def build_database(database_dir, include_poisoned=False, extra_dir=None):
     client = chromadb.PersistentClient(path=str(database_dir))
 
     try:
@@ -48,6 +49,12 @@ def build_database(database_dir, include_poisoned=False):
         files += [
             (file, "poisoned")
             for file in sorted(POISONED_DIR.glob("*.txt"))
+        ]
+
+    if extra_dir is not None:
+        files += [
+            (file, "poisoned")
+            for file in sorted(extra_dir.glob("*.txt"))
         ]
 
     total_chunks = 0
@@ -98,6 +105,13 @@ def main():
     build_database(
         ROOT / "data" / "chroma_confidentiality_poisoned",
         include_poisoned=True
+    )
+
+    print("\nBuilding third confidentiality database")
+
+    build_database(
+        ROOT / "data" / "chroma_confidentiality_prompt_injection",
+        extra_dir=PROMPT_INJECTION_DIR
     )
 
 
