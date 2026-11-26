@@ -147,4 +147,90 @@ The repository contains the following directories and files, depending on the se
 
 ## Git branches and reproducibility
 
-Separate Git branches preserve the implementation and results of individual
+Separate Git branches preserve the implementation and results of individual experimental conditions.
+
+| Branch or tag | Purpose | Reference commit |
+|---|---|---|
+| main | Project overview and original baseline | 7cfe99a |
+| baseline-clean-v1 | Original baseline snapshot | 7cfe99a |
+| experiment/clean-integrity-evaluation | Clean integrity control | cdb2269 |
+| experiment/integrity-poisoning | Integrity experiment | 050169c |
+| experiment/confidentiality-poisoning | Confidentiality experiment | cdc48b1 |
+| experiment/confidentiality-prompt-injection | Exploratory experiment | fea8b8c |
+
+The exploratory prompt injection experiment is preserved for reference but is excluded from the primary experimental analysis.
+
+Historical reference commits are retained to support reproducibility independently of subsequent repository maintenance.
+
+## Installation
+
+### Prerequisites
+
+- Python 3.12
+- Git
+- Ollama
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Sin9ularity1/bachelor_project.git
+cd bachelor_project
+```
+
+### Create a Python virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment on Windows:
+
+```cmd
+.venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Download the required models
+
+```bash
+ollama pull nomic-embed-text
+ollama pull llama3.1:8b
+```
+
+### Run the baseline implementation
+
+```bash
+python src/ingest.py
+python src/rag.py
+```
+
+### Run the baseline evaluation
+
+```bash
+python src/evaluate.py
+```
+
+Execution procedures may differ between experimental branches. Refer to the corresponding source code and historical commits when reproducing individual experiments.
+
+## Research ethics and scope
+
+All organizational documents, policies, employee records and restricted information used in this project are synthetic.
+
+The research is conducted within a controlled, locally hosted environment for academic and defensive cybersecurity purposes. No production systems or real organizational information are targeted.
+
+## Project status
+
+- [x] Baseline RAG implementation
+- [x] Baseline evaluation
+- [x] Integrity experiment
+- [x] Confidentiality experiment
+- [ ] Final manual baseline grading
+- [ ] Mitigation implementation
+- [ ] Mitigation evaluation
+- [ ] Final analysis and discussion
+- [ ] Bachelor report
